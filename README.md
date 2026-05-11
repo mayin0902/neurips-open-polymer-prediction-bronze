@@ -1,6 +1,10 @@
 # NeurIPS Open Polymer Prediction 2025
 
-Kaggle Bronze Medal solution for **NeurIPS - Open Polymer Prediction 2025**.
+![Kaggle](https://img.shields.io/badge/Kaggle-Bronze%20Medal-CD7F32)
+![Rank](https://img.shields.io/badge/Rank-217%20%2F%202240-blue)
+![Organizer](https://img.shields.io/badge/Organizer-NeurIPS%20%2F%20Kaggle-green)
+
+**Kaggle Bronze Medal solution**, ranked **217 / 2240** in **NeurIPS - Open Polymer Prediction 2025**.
 
 The competition focuses on molecular property prediction for polymers from SMILES strings. The final solution uses robust SMILES canonicalization, target-specific descriptor models, graph neural network features, and weighted blending across complementary branches.
 
@@ -10,8 +14,8 @@ The competition focuses on molecular property prediction for polymers from SMILE
 | --- | --- |
 | Competition | NeurIPS - Open Polymer Prediction 2025 |
 | Organizer | NeurIPS / Kaggle |
-| Medal | Bronze |
-| Rank | 217 / 2240 |
+| Medal | **Bronze Medal** |
+| Rank | **217 / 2240** |
 | Awarded | September 16, 2025 |
 | Targets | `Tg`, `FFV`, `Tc`, `Density`, `Rg` |
 
