@@ -1,0 +1,18 @@
+paths:
+  competition_dir: /kaggle/input/neurips-open-polymer-prediction-2025
+  descriptor_dir: /kaggle/input/modred-dataset
+  output_dir: /kaggle/working
+
+files:
+  test: test.csv
+  catboost: cat_sub.csv
+  xgboost: xgb_sub.csv
+  graph: gnn_sub.csv
+  submission: submission.csv
+
+ensemble:
+  graph: 0.4
+  catboost: 0.3
+  xgboost: 0.3
+
+seed: 10

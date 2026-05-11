@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neurips-polymer-prediction-solution"
+version = "0.1.0"
+description = "Kaggle Bronze Medal solution for NeurIPS Open Polymer Prediction 2025."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "pandas",
+  "pyyaml",
+  "scikit-learn",
+]
+
+[project.optional-dependencies]
+chem = [
+  "catboost",
+  "mordred",
+  "rdkit",
+  "xgboost",
+]
+graph = [
+  "torch",
+  "torch-geometric",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
