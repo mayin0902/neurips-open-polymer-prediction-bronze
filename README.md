@@ -52,7 +52,7 @@ src/polymer_prediction/
 ## Quick Start
 
 ```bash
-python -m pip install -e .
+python -m pip install -e ".[chem,graph]"
 python scripts/infer_tabular.py --config configs/default.yaml --model catboost
 python scripts/infer_tabular.py --config configs/default.yaml --model xgboost
 python scripts/infer_graph.py --config configs/default.yaml --checkpoint /kaggle/input/polymer-gnn/model.pt
