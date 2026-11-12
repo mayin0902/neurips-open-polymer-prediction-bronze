@@ -23,6 +23,7 @@ chem = [
   "xgboost",
 ]
 graph = [
+  "rdkit",
   "torch",
   "torch-geometric",
 ]
