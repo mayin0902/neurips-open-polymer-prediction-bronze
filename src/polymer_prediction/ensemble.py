@@ -18,6 +18,12 @@ def blend_predictions(
     catboost = pd.read_csv(catboost_path).sort_values("id").reset_index(drop=True)
     xgboost = pd.read_csv(xgboost_path).sort_values("id").reset_index(drop=True)
 
+    ids = graph["id"]
+    if ids.isna().any() or ids.duplicated().any():
+        raise ValueError("Submission IDs must be present and unique.")
+    if not ids.equals(catboost["id"]) or not ids.equals(xgboost["id"]):
+        raise ValueError("Submission IDs must match across all blend inputs.")
+
     output = graph[["id"]].copy()
     for target in TARGETS:
         output[target] = (
