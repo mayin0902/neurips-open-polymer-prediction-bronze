@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 from polymer_prediction.constants import TARGETS
@@ -23,6 +24,10 @@ def blend_predictions(
         raise ValueError("Submission IDs must be present and unique.")
     if not ids.equals(catboost["id"]) or not ids.equals(xgboost["id"]):
         raise ValueError("Submission IDs must match across all blend inputs.")
+
+    for name, frame in (("graph", graph), ("catboost", catboost), ("xgboost", xgboost)):
+        if not np.isfinite(frame[TARGETS].to_numpy(dtype=np.float64)).all():
+            raise ValueError(f"The {name} submission must contain finite predictions for every target.")
 
     output = graph[["id"]].copy()
     for target in TARGETS:
